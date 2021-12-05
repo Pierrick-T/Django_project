@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import PhysicalPort
 # Create your views here.
 
-def index(request):
-    return HttpResponse("physical port: Physical port 1 \n user1: user \n user2")
+def physicalport(request, physicalport_id):
+    return HttpResponse(PhysicalPort.objects.get(id=physicalport_id))
+
+def users(request, physicalport_id):
+    return HttpResponse(PhysicalPort.objects.get(id=physicalport_id).user_set.all())
