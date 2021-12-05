@@ -14,3 +14,6 @@ So here is your objective: Could you please write a Django application that cons
     
     - Optionally, you can create a Dockerfile for building a container image
 
+To use: 
+`localhost:8000/<physicalport_id>` to get the physical port
+`localhost:8000/<physicalport_id>/users` to get the users
