@@ -7,4 +7,5 @@ class User(models.Model):
 
 class PhysicalPort(models.Model):
     # Add the Many to one relation here
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     location = models.CharField(max_length=30)
